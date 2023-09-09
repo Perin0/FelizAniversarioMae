@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/frases.css" />
+    <title>Gerador de Frases</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1 class="display-4"></h1>
+      <p class="lead">
+        Palavras, junto com linguagem comporal, são o aspecto mais importante da comunicação, elas são a base de relações sociais desde os primórdios,
+        porém a maior influência delas em um indivíduo (principalmente crianças) são na formação de caráter e formas de interação social que a pessoa
+        aprende. Por causa disso, importantes memórias podem ser formadas a partir de sentenças ou frases. E não há um melhor exemplo do que frases
+        que uma mãe SEMPRE diz.
+      </p>
+      <hr class="my-4" />
+      <p>Gerar uma frase.</p>
+      <a class="btn btn-primary btn-lg" id="quoteBtn" onclick="pickAquote()" role="button">Gerar</a>
+      <br />
+      <div class="quote-response" id="responseBox" type="text" readonly></div>
+    </div>
+
+    <script>
+      var quotes = [
+        "Você vai dormir na sala hoje? (Para o Guilherme)",
+        "Leva a blusa ou põe uma calça, você não vai sair assim. (Para o Guilherme)",
+        "Filho como você tá alto!!! (Para o Guilherme)",
+        "Aiiii! Cortou o cabelo! (Para o Guilherme)",
+        "Como um menino desse não tem uma namorada ainda, Meu Deus?! (Para o Gabriel e Guilherme)",
+        "Não vai oferecer pra mim não!? (Você diz isso pra comida menos saudável possível, que você NUNCA come)"
+      ]
+      var lastRandomIndex = -1
+      const responseBox = document.getElementById("responseBox")
+
+      function pickAquote() {
+        var randomIndex
+
+        do {
+          randomIndex = Math.floor(Math.random() * quotes.length)
+        } while (randomIndex == lastRandomIndex)
+
+        lastRandomIndex = randomIndex
+        var randomQuote = quotes[randomIndex]
+        responseBox.textContent = randomQuote
+      }
+    </script>
+  </body>
+</html>

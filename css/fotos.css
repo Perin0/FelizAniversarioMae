@@ -1,0 +1,75 @@
+body {
+  background-color: #f05e73;
+}
+p {
+  font-weight: 500;
+}
+.lead {
+  font-weight: 400;
+}
+.jumbotron {
+  background-color: #fde9e9;
+  margin-top: 4% !important;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 1300px;
+  height: fit-content;
+  text-align: justify;
+}
+.carousel-inner {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  height: 900px;
+  width: 1500px;
+  margin-top: 100px;
+  left: 4%;
+  margin-bottom: 100px;
+}
+.carousel-item img {
+  position: relative;
+  max-width: 100%;
+  max-height: 800px;
+  top: 50px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+.carousel-indicators .active{
+    background-color: black !important;
+}
+.carousel-indicators .unactive{
+  background-color: rgba(56, 56, 56, 0.582);
+}
+.carousel-control-prev-icon{
+  background-image: url(../img/icon/arrow.png);
+  height: 40px;
+  width: 40px;
+  rotate: 180deg;
+}
+.carousel-control-next-icon{
+  background-image: url(../img/icon/arrow.png);
+  height: 40px;
+  width: 40px;
+}
+.top-page{
+  transform: translateY(-510px);
+}
+.dark-font{
+  filter: invert(1);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a7a7a7;
+}
+* {
+  caret-color: transparent;
+}

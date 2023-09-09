@@ -1,0 +1,30 @@
+body{
+    background-color: #f05e73;
+}
+p{
+    font-weight: 500;
+}
+.lead{
+    font-weight: 400;
+}
+.jumbotron{
+    background-color: #fde9e9;
+    margin-top: 4% !important;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 800px;
+    height: fit-content;
+    text-align: justify;
+}
+.btn-primary{
+    background-color: #38a4d0;
+    border: none;
+    color:white;
+}
+.btn-primary:hover{
+    background-color: #008db9;
+}
+* {
+    caret-color: transparent;
+  }
